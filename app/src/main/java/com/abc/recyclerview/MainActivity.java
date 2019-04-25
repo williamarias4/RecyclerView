@@ -1,7 +1,11 @@
 package com.abc.recyclerview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +13,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ArrayList<Source> imageList = new ArrayList<>();
+        imageList.add(new Source("Image 1", R.drawable.imagen1, 0));
+        imageList.add(new Source("Image 2", R.drawable.imagen2, 0));
+        imageList.add(new Source("Image 3", R.drawable.imagen3, 0));
+        imageList.add(new Source("Image 4", R.drawable.imagen4, 0));
+
+        RecyclerView container = findViewById(R.id.container);
+
+        container.setItemViewCacheSize(20);
+        container.setDrawingCacheEnabled(true);
+        container.setHasFixedSize(true);
+        LinearLayoutManager layout = new LinearLayoutManager(getApplicationContext());
+        layout.setOrientation(LinearLayoutManager.VERTICAL);
+        container.setAdapter(new Adapter(imageList));
+        container.setLayoutManager(layout);
     }
 }

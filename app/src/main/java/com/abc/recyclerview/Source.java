@@ -1,10 +1,15 @@
 package com.abc.recyclerview;
 
 public class Source {
-    private String title;
+    private  String title;
     private int image;
     private int state;
 
+    /**
+     * @param title
+     * @param image
+     * @param state
+     */
     public Source(String title, int image, int state) {
         this.title = title;
         this.image = image;
