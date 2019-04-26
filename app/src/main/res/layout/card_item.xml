@@ -55,7 +55,8 @@
                android:layout_height="wrap_content"
                android:layout_weight="1"
                android:drawableLeft="@android:drawable/btn_star"
-               android:text="Button"
+               android:drawableStart="@android:drawable/btn_star"
+               android:text="@string/like"
                tools:text="Me Gusta" />
 
            <Button
@@ -64,7 +65,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_weight="1"
-               android:text="Button"
+               android:text="@string/favorites"
                tools:text="Favoritos" />
         </LinearLayout>
     </LinearLayout>
