@@ -13,13 +13,13 @@ import java.util.List;
 //encargado de registrar el enlace al card item
 public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     //hacer esto como tercera parte.
-    private List<Source> sourceList;
+    private final List<Source> sourceList;
 
     //hacer esto como primera parte.
-    private Button button1;
-    private Button button2;
-    private ImageView image;
-    private TextView title;
+    private final Button button1;
+    private final Button button2;
+    private final ImageView image;
+    private final TextView title;
 
     public ViewHolder(@NonNull View itemView, List<Source> sourceList) {
         super(itemView);
@@ -37,20 +37,12 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         this.sourceList = sourceList;
     }
 
-    public Button getButton1() {
-        return button1;
-    }
-
-    public Button getButton2() {
-        return button2;
-    }
-
-    public ImageView getImage() {
+    ImageView getImage() {
         return image;
     }
 
     public TextView getTitle() {
-        return title;
+       return title;
     }
 
     @Override
