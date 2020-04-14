@@ -18,14 +18,15 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, parent, false);
+        View view = LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.card_item, parent, false);
         return new ViewHolder(view, sourceList);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-      viewHolder.getTitle().setText(sourceList.get(i).getTitle());
-      viewHolder.getImage().setImageResource(sourceList.get(i).getImage());
+        viewHolder.getTitle().setText(sourceList.get(i).getTitle());
+        viewHolder.getImage().setImageResource(sourceList.get(i).getImage());
     }
 
     @Override

@@ -20,5 +20,4 @@ public class Source {
     public int getImage() {
         return image;
     }
-
- }
+}

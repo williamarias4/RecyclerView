@@ -26,7 +26,7 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         //hacer esto como primera parte.
         button1 = itemView.findViewById(R.id.button1);
         button2 = itemView.findViewById(R.id.button2);
-        image =  itemView.findViewById(R.id.image);
+        image = itemView.findViewById(R.id.image);
         title = itemView.findViewById(R.id.title);
 
         //hacer esto como segunda parte.
@@ -42,7 +42,7 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
     }
 
     public TextView getTitle() {
-       return title;
+        return title;
     }
 
     @Override
@@ -52,10 +52,10 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         Source source = sourceList.get(position);
 
         //segunda parte
-        if(v.getId() == button1.getId()) {
-          Toast.makeText(button1.getContext(),
-                  "Click on option one, item " + position + " for title " + source.getTitle()
-                  , Toast.LENGTH_SHORT).show();
+        if (v.getId() == button1.getId()) {
+            Toast.makeText(button1.getContext(),
+                    "Click on option one, item " + position + " for title " + source.getTitle()
+                    , Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(button2.getContext(),
                     "Click on option two, item " + position + " for title " + source.getTitle()
